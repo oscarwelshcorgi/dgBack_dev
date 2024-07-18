@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "board")
+@Table(name = "article")
 @NoArgsConstructor
-public class Board {
+public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +40,7 @@ public class Board {
     private MemberInfo memberInfo;
 
     @Builder
-    public Board(Long id, String title, String content, String email, LocalDateTime createDate, LocalDateTime updateDate, String deleteYn, int viewCount, String boardCode, MemberInfo memberInfo) {
+    public Article(Long id, String title, String content, String email, LocalDateTime createDate, LocalDateTime updateDate, String deleteYn, int viewCount, String boardCode, MemberInfo memberInfo) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -56,6 +56,6 @@ public class Board {
     @PrePersist
     public void prePersist() {
         this.createDate = LocalDateTime.now(); // 엔티티가 저장되기 전에 작성 날짜 설정
-        this.deleteYn = "N";
+        this.deleteYn = "n";
     }
 }

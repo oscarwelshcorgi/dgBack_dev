@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/board?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Seoul
-    username: root
-    password: 12345678
+          url: jdbc:mysql://122.38.239.60:3310/dongga_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Seoul
+    username: dongga_admin1
+    password: tjfmstkf1@
 
   jpa:
     show-sql: true
